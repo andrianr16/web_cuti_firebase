@@ -257,9 +257,13 @@ export default function DashboardHrd() {
             {/* Header Utama HRD */}
             <div className="bg-white border-b px-8 flex justify-between items-center shadow-sm h-16 sticky top-0 z-50">
                 <div className="flex items-center gap-8 h-full">
-                    <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-[#84cc16] flex items-center justify-center text-white font-bold text-xs shadow-sm">LG</div>
-                        <span className="font-bold text-gray-800 tracking-wide text-[10px] uppercase mt-2">Lestari Group</span>
+                    <div className="flex items-center">
+                        <img 
+                            src="/logo.png" 
+                            alt="Logo Lestari Group" 
+                            className="h-9 object-contain" 
+                            onError={(e) => { e.target.outerHTML = '<span class="font-bold text-gray-800 tracking-wide text-[12px] uppercase">LESTARI GROUP</span>'; }}
+                        />
                     </div>
                     <nav className="hidden md:flex h-full">
                         <Link to="/" className={`h-full flex items-center px-4 text-sm ${location.pathname === '/' ? 'font-bold text-blue-700 border-b-[3px] border-blue-700' : 'font-medium text-gray-500 hover:text-blue-600'}`}>Kelola Cuti (HRD)</Link>
